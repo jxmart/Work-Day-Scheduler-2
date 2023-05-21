@@ -1,17 +1,14 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-let todayDate = moment().format('MMM DDDD, YYYY')
-$('#currentDay').html(todayDate)
-
-
 $(document).ready(function () {
-
+  let todayDate = moment().format('dddd, MMM YYYY')
+  $('#currentDay').html(todayDate)
   $('.saveBtn').on('click', function () {
     let text = $(this).siblings('.description')
     console.log(text)
     let hour = $(this).parent().attr('id')
-    localStorage.setItem(hour, text)
+    localStorage.setItem(hour, text.val())
     console.log($(this).parent().attr('id'))
   })
 
@@ -44,15 +41,15 @@ $(document).ready(function () {
 
 });
 
-$('#hour9. description').val(localStorage.getItem('#hour9'))
-$('#hour10. description').val(localStorage.getItem('#hour10'))
-$('#hour11. description').val(localStorage.getItem('#hour11'))
-$('#hour12. description').val(localStorage.getItem('#hour12'))
-$('#hour13. description').val(localStorage.getItem('#hour13'))
-$('#hour14. description').val(localStorage.getItem('#hour14'))
-$('#hour15. description').val(localStorage.getItem('#hour15'))
-$('#hour16. description').val(localStorage.getItem('#hour16'))
-$('#hour17. description').val(localStorage.getItem('#hour17'))
+$('#hour9 .description').val(localStorage.getItem('#hour9'))
+$('#hour10 .description').val(localStorage.getItem('hour10'))
+$('#hour11 .description').val(localStorage.getItem('hour11'))
+$('#hour12 .description').val(localStorage.getItem('hour12'))
+$('#hour13 .description').val(localStorage.getItem('hour13'))
+$('#hour14 .description').val(localStorage.getItem('hour14'))
+$('#hour15 .description').val(localStorage.getItem('hour15'))
+$('#hour16 .description').val(localStorage.getItem('hour16'))
+$('#hour17 .description').val(localStorage.getItem('hour17'))
 
 
 hourTracker()
