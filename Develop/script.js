@@ -33,15 +33,15 @@ $(document).ready(function () {
         $(this).removeClass('past')
         $(this).addClass('future')
       }
-    })
+    });
 
   }
-  $('#currentDay').text(dayjs().format('MMMM DD, YYYY'))
+  $('#currentDay').text(dayjs().format('dddd, MMM YYYY'))
 
 
-});
 
-$('#hour9 .description').val(localStorage.getItem('#hour9'))
+
+$('#hour9 .description').val(localStorage.getItem('hour9'))
 $('#hour10 .description').val(localStorage.getItem('hour10'))
 $('#hour11 .description').val(localStorage.getItem('hour11'))
 $('#hour12 .description').val(localStorage.getItem('hour12'))
@@ -51,5 +51,5 @@ $('#hour15 .description').val(localStorage.getItem('hour15'))
 $('#hour16 .description').val(localStorage.getItem('hour16'))
 $('#hour17 .description').val(localStorage.getItem('hour17'))
 
-
 hourTracker()
+});
